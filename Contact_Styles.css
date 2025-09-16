@@ -1,0 +1,320 @@
+:root {
+    --primary-color: #a8ff35;
+    --secondary-color: #f8f9fa;
+    --dark-color: #212529;
+    --text-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-color) !important;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color) !important;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--dark-color) !important;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.page-header {
+    background: linear-gradient(135deg, rgba(168, 255, 53, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+    padding: 4rem 0 2rem;
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #333 0%, #666 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.contact-subtitle {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.contact-info {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.contact-item-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1rem;
+    color: var(--dark-color);
+}
+
+.contact-item-content {
+    flex: 1;
+}
+
+.contact-item-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.contact-item-value {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.contact-item-value a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item-value a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.quick-contact {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #95e630 100%);
+    color: var(--dark-color);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.quick-contact h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.quick-contact p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.footer {
+    background: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .contact-card {
+        padding: 2rem;
+    }
+    
+    .contact-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Legacy styles for compatibility */
+.contact,
+.contact * {
+    box-sizing: border-box;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 100vh;
+    position: relative;
+}
+
+.landing-page {
+    background: #ffffff;
+    flex-shrink: 0;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-us {
+    color: #000000;
+    text-align: left;
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    position: absolute;
+    left: 80px;
+    top: 187px;
+}
+
+.reach-out-to-the-course-team-for-support-or-inquiries {
+    color: #000000;
+    text-align: left;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-size: 24px;
+    line-height: 124.28%;
+    font-weight: 500;
+    position: absolute;
+    left: 81px;
+    top: 299px;
+    width: 1279px;
+}
+
+.gautam-shiv-university-of-maryland-fall-2025 {
+    color: #000000;
+    text-align: center;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    left: 469px;
+    top: 864px;
+}
+
+.professor-contact-paul-t-shapiro-pshapiro-umd-edu-ta-contact-zam-mozumder-zam-umd-edu-samiha-meah-smeah-umd-edu-abhi-gupta-agupta-09-umd-edu {
+    color: #000000;
+    text-align: left;
+    font-family: "-", sans-serif;
+    font-size: 24px;
+    line-height: 124.28%;
+    font-weight: 400;
+    position: absolute;
+    left: 84px;
+    top: 362px;
+}
+
+.professor-contact-paul-t-shapiro-pshapiro-umd-edu-ta-contact-zam-mozumder-zam-umd-edu-samiha-meah-smeah-umd-edu-abhi-gupta-agupta-09-umd-edu-span {
+    font-family: "Montserrat-Bold", sans-serif;
+    font-weight: 700;
+}
+
+.professor-contact-paul-t-shapiro-pshapiro-umd-edu-ta-contact-zam-mozumder-zam-umd-edu-samiha-meah-smeah-umd-edu-abhi-gupta-agupta-09-umd-edu-span2 {
+    font-family: "Montserrat-Medium", sans-serif;
+    font-weight: 500;
+}
